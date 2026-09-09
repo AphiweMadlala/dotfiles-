@@ -44,4 +44,12 @@ else
   git -C ~/Developer/awesome-design-md pull --ff-only
 fi
 
+echo "Installing img2threejs..."
+if [ ! -d ~/.claude/skills/img2threejs/.git ]; then
+  git clone https://github.com/img2threejs/img2threejs.git \
+    ~/.claude/skills/img2threejs
+else
+  git -C ~/.claude/skills/img2threejs pull --ff-only
+fi
+
 echo "Claude Code setup complete."
