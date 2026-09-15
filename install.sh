@@ -61,5 +61,8 @@ firecrawl init --agent claude-code --skip-auth -y
 echo "Adding Apify Claude marketplace..."
 claude plugin marketplace add apify/apify-claude-code-plugin
 
+echo "Adding Apify Claude marketplace..."
+claude plugin marketplace add https://github.com/apify/apify-claude-code-plugin
+
 echo "Installing Apify Claude plugin..."
 claude plugin install apify@apify
