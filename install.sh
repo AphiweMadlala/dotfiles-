@@ -53,3 +53,13 @@ else
 fi
 
 echo "Claude Code setup complete."
+echo "Installing Firecrawl..."
+npm install -g firecrawl-cli
+
+echo "Installing Firecrawl skills for Claude Code..."
+firecrawl init --agent claude-code --skip-auth -y
+echo "Adding Apify Claude marketplace..."
+claude plugin marketplace add apify/apify-claude-code-plugin
+
+echo "Installing Apify Claude plugin..."
+claude plugin install apify@apify
